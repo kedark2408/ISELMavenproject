@@ -4,7 +4,6 @@ pipeline {
         stage('Build Maven Project') {
             options {
                       warnError('This build is unsuccesful')
-                      skipStagesAfterUnstable()
             }
             steps {
                     echo 'Building Maven project'
@@ -16,6 +15,9 @@ pipeline {
             }
         }
         stage('Package Maven Project') {
+            options {
+                skipStagesAfterUnstable()
+            }
             steps {
                 echo 'Packaging the Maven project'
                 sh 'mvn package'
