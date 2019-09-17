@@ -10,7 +10,7 @@ public class SampleUtilTest {
         	System.out.println("add");
         	Integer a = 20;
         	Integer b = 30;
-        	Integer expResult = 50;
+        	Integer expResult = 60;
         	Integer result = SampleUtil.add(a, b);
 			assertEquals(expResult,result);
 			assertEquals(expResult,SampleUtil.add(40, 10));
